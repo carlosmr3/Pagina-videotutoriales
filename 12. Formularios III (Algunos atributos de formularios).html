@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--He copiado el documento anterior y sobre éste vamos a aplicar 
+    los nuevos conceptos del videotutorial-->
+    <h1>Algunos atributos de formularios</h1>
+    <form action="procesa.php" method="post">
+    <fieldset>
+        <legend>Datos personales</legend>
+        <p>
+            <label for="nom">Nombre:</label>
+            <input type="text" maxlength=6 id="nom" 
+            placeholder="Escriba su nombre completo" name="nombre"
+            required>
+        </p>
+        <p>
+            <!--Parece que no me actúa el autofocus-->
+            <label for="pob">Población:</label>
+            <input type="text" value="Alcázar de San Juan" id="pob"
+            name="pob" maxlength="50" autofocus>
+        </p>
+        <p>
+            <label for="contrase">Contraseña:</label>
+            <input type="password" maxlength="6" minlength="4" 
+            id="contrase" name="contraseña">
+        </p>
+        <p>
+            <label for="hombre"> Hombre:</label>
+            <input type="radio" value="H" id="hombre" name="género" checked>
+            <label for="mujer">Mujer:</label>
+            <input type="radio" value="M" id="mujer" name="género">
+        </p>
+        <p>
+            <label for="fumador">Fumador:</label>
+            <input type="checkbox" checked id="fumador" name="fumador">
+        </p>
+    </fieldset>
+    <p>
+        <Label for="Prov">Provincia:</Label>
+        <select name="Prov" id="Prov">
+            <option value="CR">Ciudad Real</option>
+            <option value="AB">Albacete</option>
+            <option value="TO" selected>Toledo</option>
+            <option value="CU">Cuenca</option>
+            <option value="GU">Guadalajara</option>
+        </select>        
+    </p>
+    <p>
+        <!--¿No sería mas simple en vez de usar cols y rows hacer click 
+        con el ratón y ajustar el tamaño de la cajita?
+        Porque poder se puede. 
+        ¿La palabra observaciones no quedaría 
+        mejor en la parte alta de la caja o centrada? seguro que se puede-->
+        <label for="Obs">Observaciones:</label>
+        <textarea name="Obs" id="Obs" cols="10" rows="6">
+        Escriba algo...
+        </textarea>
+    <p>
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color">
+   </p>
+   <p>
+        <label for="fecha-nac">Fecha de nacimiento:</label>
+        <input type="date" id="fecha-nac" name="fecha-nac">
+   </p>
+   <p>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="0" max="100">
+   </p>
+   <p>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+   </p>
+    <p>
+        <label for="foto">Adjuntar foto</label>
+        <input type="file" id="foto" name="foto">
+    </p>
+    <!--botones de envío y reset-->
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reiniciar formulario">
+    </p>
+</form>
+    <p>
+        <a href="index.html">Volver</a>
+    </p>  
+</body>
+</html>
